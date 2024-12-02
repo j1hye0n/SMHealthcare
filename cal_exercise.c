@@ -23,23 +23,25 @@ int exercise_list_size = 0;
 
 
 /*
-    description : read the information in "excercises.txt"
+	description : read the information in "excercises.txt"
 */
 
 void loadExercises(const char* EXERCISEFILEPATH) {
-    FILE *file = fopen(EXERCISEFILEPATH, "r");
+    FILE *file = fopen("exercises.txt", "r"); // edit file_path for absolute path
     if (file == NULL) {
         printf("There is no file for exercises! \n");
         return;
     }
-
+	else{
     // ToCode: to read a list of the exercises from the given file
-    while ( ) {
-    	
-        if (exercise_list_size >= MAX_EXERCISES){
-        	break;
-		}
-    }
+    	while (1) {
+    		char *fgets(char* str , MAX_EXERCISES , *file); // for reading file
+    		printf("%s",str); // debug code
+        	if (exercise_list_size >= MAX_EXERCISES){
+        		break;
+			}
+    	}
+}
 
     fclose(file);
 }
@@ -57,6 +59,8 @@ void loadExercises(const char* EXERCISEFILEPATH) {
 
 void inputExercise(HealthData* health_data) {
     int choice, duration, i;
+    
+    case 
     
     // ToCode: to provide the options for the exercises to be selected
     printf("The list of exercises: \n");
