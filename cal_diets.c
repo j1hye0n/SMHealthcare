@@ -54,7 +54,15 @@ void loadDiets(const char* DIETFILEPATH) {
 
 void inputDiet(HealthData* health_data) {
     int choice, i;
+    switch (choice)
+    {
+    case 1:
+        /* code */
+        break;
     
+    default:
+        break;
+    }
     // ToCode: to provide the options for the diets to be selected
     printf("The list of diets:\n");
     
