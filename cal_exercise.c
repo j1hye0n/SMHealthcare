@@ -20,8 +20,6 @@
 // To declare the structure of the exercises
 static Exercise exercise_list[MAX_EXERCISES];
 int exercise_list_size = 0;
-char EXERCISEFILEPATH = "C:\Users\urr55\Desktop\BasicProgramming\SMHealthcare\cal_exercises.txt"; // where is path declaration
-
 
 /*
 	description : read the information in "excercises.txt"
@@ -36,8 +34,8 @@ void loadExercises(const char* EXERCISEFILEPATH) {
 	else{
     // ToCode: to read a list of the exercises from the given file
     	while (1) {
-    		char *fgets(char* str , MAX_EXERCISES , *file); // for reading file
-    		printf("%s",str); // debug code
+    		char *fgets(char *str , MAX_EXERCISES , file);
+    		//printf("%s",str);
         	if (exercise_list_size >= MAX_EXERCISES){
         		break;
 			}
@@ -65,7 +63,7 @@ void inputExercise(HealthData* health_data) {
     	case 1:
     // ToCode: to provide the options for the exercises to be selected
     		printf("The list of exercises: \n");
-			loadExercises();
+			loadExercises("exercies.txt");
             break;
         case 4:
     // ToCode: to enter the exercise to be chosen with exit option
@@ -78,6 +76,10 @@ void inputExercise(HealthData* health_data) {
     scanf("%d", &duration);
 
     // ToCode: to enter the selected exercise and total calcories burned in the health data
+    if(choice==1&&duration!=0)
+    {
+    	
+	}
     
 
 }

@@ -1,0 +1,15 @@
+[Exercises] 
+walking - 120 kcal
+yoga - 120 kcal
+running - 1320 kcal
+Total calories burned: 1560 kcal 
+
+[Diets] 
+rice - 600 kcal
+chicken - 925 kcal
+chicken - 925 kcal
+Total calories intake: 2450 kcal 
+
+[Total] 
+Basal metabolic rate: 1300 kcal
+The remaining calories: -410 kcal
