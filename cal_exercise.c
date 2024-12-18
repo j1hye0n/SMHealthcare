@@ -26,21 +26,21 @@ int exercise_list_size = 0;
 */
 
 void loadExercises(const char* EXERCISEFILEPATH) {
-    FILE *file = fopen(EXERCISEFILEPATH, "r"); // edit file_path for absolute path > parameter
+    FILE *file = fopen(EXERCISEFILEPATH, "r"); 
     if (file == NULL) {
         printf("There is no file for exercises! \n");
         return;
     }
-	else{
+	char buffer[MAX_EXERCISES];
     // ToCode: to read a list of the exercises from the given file
-    	while (1) {
-    		char *fgets(char *str , MAX_EXERCISES , file);
-    		//printf("%s",str);
-        	if (exercise_list_size >= MAX_EXERCISES){
-        		break;
-			}
-    	}
-}
+    while (1) {
+    	fgets(buffer , MAX_EXERCISES , file); //12.18 22:00 edited
+    	exercise_list_size++;
+    	//printf("%s",str); double print
+        if (exercise_list_size >= MAX_EXERCISES){
+        	break;
+		}
+    }
 
     fclose(file);
 }
@@ -59,18 +59,21 @@ void loadExercises(const char* EXERCISEFILEPATH) {
 void inputExercise(HealthData* health_data) {
     int choice, duration, i;
     
-    switch (choice)
+    switch (choice){
     	case 1:
     // ToCode: to provide the options for the exercises to be selected
-    		printf("The list of exercises: \n");
+    	{
+			printf("The list of exercises: \n");
 			loadExercises("exercies.txt");
-            break;
-        case 4:
+			break;
+		}
+        case 2:
     // ToCode: to enter the exercise to be chosen with exit option
-            printf("Exit the Exercise Option.\n");
-            exit();
-            break;
- 
+        {   printf("Exit the Exercise Option.\n");
+            exit(0);
+    	}
+    }
+            
     // To enter the duration of the exercise
     printf("Enter the duration of the exercise (in min.): ");
     scanf("%d", &duration);
